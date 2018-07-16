@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Download</title>
+	<script type="text/javascript" src="js/loading-bar.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+	<script type="text/javascript" src="/eel.js"></script>
+	<script type="text/javascript">
+		eel.expose(update_progress);
+		function update_progress(prog) {
+			var elem = document.getElementById("pb");
+			var txt = document.getElementById("txt");
+			elem.style.width = prog + '%';
+			txt.innerHTML = prog * 1 + "%";
+		}
+
+		function dl() {
+			url = document.getElementById('url').value;
+			eel.start_download(url);
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="url" placeholder="URL" id="url"><button onclick="dl()">Download</button>
+	<!-- The colors chosen by W3 are beautiful-->
+	<div class="w3-light-grey">
+		<div id="pb" class="w3-green" style="height:24px;width:0%;"></div>
+	</div>
+	<p id="txt">0%</p>
+	<div><p>Simple Download by <a href="https://github.com/tatoluckyfox">Tatoluckyfox</a></div>
+</body>
+</html>
