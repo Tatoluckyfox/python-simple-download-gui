@@ -3,7 +3,6 @@ import os
 import requests
 
 # tele2 speedtest     http://speedtest.tele2.net/1GB.zip
-# headers    {'Content-Length': '104857600', 'Accept-Ranges': 'bytes', 'Keep-Alive': 'timeout=2, max=100', 'Server': 'Apache', 'Last-Modified': 'Fri, 19 Feb 2016 15:41:52 GMT', 'Connection': 'Keep-Alive', 'ETag': '"1c00b4-6400000-52c215275fe67"', 'Date': 'Mon, 16 Jul 2018 08:52:15 GMT', 'Content-Type': 'application/zip'}
 
 @eel.expose
 def start_download(url):
