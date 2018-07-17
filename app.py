@@ -17,7 +17,7 @@ def start_download(url):
 	else:
 		return
 
-	print total_length
+	#print total_length
 
 	with open(path + name_of_file, "wb") as f:
 
@@ -27,9 +27,9 @@ def start_download(url):
 
 			cs = float(os.stat(path + name_of_file).st_size)
 			prog = (cs/total_length)*100
-			print prog
+			#print prog
 			eel.update_progress(prog)
-	print "successful"
+	#print "successful"
 	return
 
 eel.init('web')
